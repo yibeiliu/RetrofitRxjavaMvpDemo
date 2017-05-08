@@ -1,5 +1,6 @@
 package tech.yibeiliu.retrofitrxjavamvpdemo.bean;
 
+import java.io.Serializable;
 import java.util.List;
 
 /**
@@ -9,7 +10,7 @@ import java.util.List;
 /**
  * 为了我方便简单，从网络上获取的 json 串，只取如下部分来进行显示
  */
-public class Subjects {
+public class Subjects implements Serializable {
 
     private String title;
     private String mainland_pubdate;

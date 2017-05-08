@@ -1,5 +1,7 @@
 package tech.yibeiliu.retrofitrxjavamvpdemo.ui.topmovies;
 
+import android.content.Context;
+
 import io.reactivex.Observer;
 import io.reactivex.disposables.CompositeDisposable;
 import io.reactivex.disposables.Disposable;
@@ -20,11 +22,13 @@ public class TopMoviesPresenter implements ITopMoviesContract.IPresenter {
     private int total = 0;  // 服务器共有 total 个电影数据
     private IHttpModel mHttpModelImpl;
 
-    public TopMoviesPresenter(ITopMoviesContract.IView view) {
+
+    public TopMoviesPresenter(Context context,ITopMoviesContract.IView view) {
         this.mView = view;
         disposableSet = new CompositeDisposable();
         mView.setPresenter(this);
         mHttpModelImpl = HttpModelImpl.getInstance();
+
     }
 
 
@@ -57,6 +61,7 @@ public class TopMoviesPresenter implements ITopMoviesContract.IPresenter {
 
             @Override
             public void onNext(Movies movies) {
+
                 if (mView != null) {  //如果 fragment 销毁了，但是网络访问回来的结果又调用了 mView.responseMoviesList 导致空指针异常
                     //把获得的 movies 对象返回给 view 展示
                     mView.responseMoviesList(movies.getSubjects());

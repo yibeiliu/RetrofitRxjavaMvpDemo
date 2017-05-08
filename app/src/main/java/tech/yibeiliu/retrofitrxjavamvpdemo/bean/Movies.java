@@ -1,12 +1,13 @@
 package tech.yibeiliu.retrofitrxjavamvpdemo.bean;
 
+import java.io.Serializable;
 import java.util.List;
 
 /**
  * Created by YiBeiLiu on 2017/04/25.
  */
 
-public class Movies {
+public class Movies implements Serializable {
     private int count;//返回的数量
     private int start;//开始的位置
     private int total;//服务器条目总数

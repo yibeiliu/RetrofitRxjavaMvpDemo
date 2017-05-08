@@ -75,9 +75,9 @@ public class TopMoviesFragment extends Fragment implements ITopMoviesContract.IV
      */
     @Override
     public void onRefresh() {
-        mSwipeRefreshLayout.setRefreshing(true);//显示加载小圆圈
-        pullToRefreshAdapter.setEnableLoadMore(false);//下拉刷新的同时不能上拉加载
-        mPresenter.onRefresh("北京");
+            mSwipeRefreshLayout.setRefreshing(true);//显示加载小圆圈
+            pullToRefreshAdapter.setEnableLoadMore(false);//下拉刷新的同时不能上拉加载
+            mPresenter.onRefresh("北京");
     }
 
     /**
@@ -91,6 +91,7 @@ public class TopMoviesFragment extends Fragment implements ITopMoviesContract.IV
 
     /**
      * 把 presenter 对象传递给 fragment (V层)
+     *
      * @param mPresenter
      */
     @Override
@@ -100,6 +101,7 @@ public class TopMoviesFragment extends Fragment implements ITopMoviesContract.IV
 
     /**
      * 下拉刷新时，从网络返回的数据
+     *
      * @param subjects
      */
     @Override
@@ -111,6 +113,7 @@ public class TopMoviesFragment extends Fragment implements ITopMoviesContract.IV
 
     /**
      * 网络返回错误
+     *
      * @param message
      */
     @Override
@@ -132,6 +135,7 @@ public class TopMoviesFragment extends Fragment implements ITopMoviesContract.IV
 
     /**
      * 上拉加载时，从网络返回的数据
+     *
      * @param subjects
      */
     @Override
@@ -164,7 +168,8 @@ public class TopMoviesFragment extends Fragment implements ITopMoviesContract.IV
             this.getData().addAll(lists);
             notifyDataSetChanged();
         }
-        public void setDataMore(List<Subjects> lists){
+
+        public void setDataMore(List<Subjects> lists) {
             this.getData().addAll(lists);
             notifyDataSetChanged();
         }

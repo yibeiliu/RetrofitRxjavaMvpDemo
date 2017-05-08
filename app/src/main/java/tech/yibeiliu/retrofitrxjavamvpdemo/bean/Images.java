@@ -1,10 +1,12 @@
 package tech.yibeiliu.retrofitrxjavamvpdemo.bean;
 
+import java.io.Serializable;
+
 /**
  * Created by YiBeiLiu on 2017/04/25.
  */
 
-public class Images {
+public class Images implements Serializable {
     /**
      * small : https://img3.doubanio.com/view/movie_poster_cover/ipst/public/p2448676053.webp
      * large : https://img3.doubanio.com/view/movie_poster_cover/lpst/public/p2448676053.webp

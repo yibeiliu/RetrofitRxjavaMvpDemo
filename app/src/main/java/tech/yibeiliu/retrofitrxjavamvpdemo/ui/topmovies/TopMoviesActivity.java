@@ -33,7 +33,7 @@ public class TopMoviesActivity extends AppCompatActivity {
             transaction.commit();
         }
         // 把 view 传递给 presenter
-        new TopMoviesPresenter(topMoviesFragment);
+        new TopMoviesPresenter(this,topMoviesFragment);
 
     }
 
