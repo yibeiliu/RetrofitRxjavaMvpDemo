@@ -3,7 +3,7 @@ package tech.yibeiliu.retrofitrxjavamvpdemo.model;
 import io.reactivex.Observer;
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.schedulers.Schedulers;
-import tech.yibeiliu.retrofitrxjavamvpdemo.api.RetrofitClient;
+import tech.yibeiliu.retrofitrxjavamvpdemo.api.APIService;
 import tech.yibeiliu.retrofitrxjavamvpdemo.bean.Movies;
 
 /**
@@ -14,11 +14,10 @@ import tech.yibeiliu.retrofitrxjavamvpdemo.bean.Movies;
 
 public class HttpModelImpl implements IHttpModel {
 
-
     private HttpModelImpl() {
     }
 
-    private static class HttpModelImplHolder{
+    private static class HttpModelImplHolder {
         private static IHttpModel instance = new HttpModelImpl();
     }
 
@@ -36,7 +35,7 @@ public class HttpModelImpl implements IHttpModel {
      */
     @Override
     public void requestMoviesList(String city, int start, int count, Observer<Movies> observer) {
-        RetrofitClient.getInstance().getApiService()
+        APIService.Builder.getAPIService()
                 .getMoviesList(city, start, count)
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
@@ -52,8 +51,7 @@ public class HttpModelImpl implements IHttpModel {
      */
     @Override
     public void requestMoviesListMore(String city, int start, int count, Observer<Movies> observer) {
-        RetrofitClient.getInstance()
-                .getApiService()
+        APIService.Builder.getAPIService()
                 .getMoviesList(city, start, count)
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())

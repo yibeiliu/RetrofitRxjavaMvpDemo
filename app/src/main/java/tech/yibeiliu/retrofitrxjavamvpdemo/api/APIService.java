@@ -15,6 +15,12 @@ public interface APIService {
 
     String BASE_URL = "https://api.douban.com/v2/movie/";
 
+    class Builder {
+        public static APIService getAPIService() {
+            return RetrofitClient.getInstance().getAPIService(APIService.class, BASE_URL);
+        }
+    }
+
     @GET("in_theaters?apikey=0b2bdeda43b5688921839c8ecb20399b")
     Observable<Movies> getMoviesList(@Query("city") String city, @Query("start") int start, @Query("count") int count);
 }

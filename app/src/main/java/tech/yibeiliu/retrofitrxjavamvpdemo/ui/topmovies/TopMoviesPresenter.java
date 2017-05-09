@@ -31,7 +31,6 @@ public class TopMoviesPresenter implements ITopMoviesContract.IPresenter {
 
     }
 
-
     @Override
     public void unSubscribe() {
         disposableSet.clear();
@@ -51,7 +50,7 @@ public class TopMoviesPresenter implements ITopMoviesContract.IPresenter {
     @Override
     public void onRefresh(String city) {
         start = 0;//刷新时，从 0 开始加载
-        //访问 M 层访问网络
+        //调用 M 层访问网络
         Observer<Movies> observer = new Observer<Movies>() {
             @Override
             public void onSubscribe(Disposable d) {

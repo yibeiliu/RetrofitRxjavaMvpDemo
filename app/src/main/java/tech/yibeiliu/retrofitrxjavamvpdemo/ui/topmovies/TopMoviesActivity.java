@@ -38,7 +38,6 @@ public class TopMoviesActivity extends AppCompatActivity {
     }
 
     private void initToolBar() {
-        // Set up the toolbar.
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         toolbar.setTitle("TopMovies");
         setSupportActionBar(toolbar);
