@@ -1,9 +1,11 @@
 # RetrofitRxjavaMvpDemo
-Retrofit + RxJava2.0 + MVP “I¬demo
+Retrofit + RxJava2.0 + MVP çš„å°demo
 
-?‡?ãqŽOŽÒ—Lˆê’è—¹‰ðC”—ØŠó–]??“I•ü—F?
+?åˆ?ä¸Šè¿°ä¸‰è€…æœ‰ä¸€å®šäº†è§£ï¼Œè¿«åˆ‡å¸Œæœ›??çš„æœ‹å‹?
 
-**?Ä–çQ•s“ž”ä?˜¢’?X‘S“I—¹= =**
+**?å†ä¹Ÿæ‰¾ä¸åˆ°æ¯”?ä¸ªæ³¨?æ›´å…¨çš„äº†= =**
 
 
-?–Ú’†Š—p API F [“_‰ä“_‰ä](https://github.com/jokermonn/-Api/blob/master/DoubanMovie.md) i‘æˆêðA¥j
+?ç›®ä¸­æ‰€ç”¨ API ï¼š [ç‚¹æˆ‘ç‚¹æˆ‘](https://github.com/jokermonn/-Api/blob/master/DoubanMovie.md) ï¼ˆç¬¬ä¸€æ¡å°±æ˜¯ï¼‰
+
+> kotlin ç‰ˆæœ¬ [ç‚¹æˆ‘](https://github.com/yibeiliu/KotlinDemo/tree/master)
